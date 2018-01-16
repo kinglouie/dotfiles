@@ -19,10 +19,14 @@ HIST_STAMPS="dd.mm.yyyy"
 export ZSH=$HOME/.oh-my-zsh
 
 plugins=(
-  git
   zsh-syntax-highlighting
+  zsh-completions
 )
 
+autoload -U compinit && compinit
+
 source $ZSH/oh-my-zsh.sh
+
+
 source ~/.zsh/aliases.sh
 source ~/.zsh/colors.sh
