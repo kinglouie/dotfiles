@@ -1,5 +1,4 @@
 plugins=(
-
   # external
   zsh-syntax-highlighting
   zsh-completions
@@ -12,11 +11,4 @@ plugins=(
   npm
   pip
   python
-
 )
-
-
-# plugin settings
-
-zstyle ':notify:*' notifier /usr/local/bin/terminal-notifier
-zstyle ':notify:*' command-complete-timeout 15
