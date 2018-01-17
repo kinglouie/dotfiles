@@ -28,4 +28,3 @@ source ~/.zsh/aliases.zsh
 #source ~/.zsh/colors.zsh
 source ~/.zsh/history.zsh
 source ~/.zsh/options.zsh
-source ~/.zsh/theme.zsh
