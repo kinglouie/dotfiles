@@ -1,6 +1,7 @@
 " Inconsolata
 if has('mac')
-  set guifont=Inconsolata-dz\ for\ Powerline:h9
+  "set guifont=Inconsolata-dz\ for\ Powerline:h13
+  set guifont=Meslo\ LG\ M\ DZ\ for\ Powerline
 endif
 
 " Don't focus the window when the mouse pointer is moved.
