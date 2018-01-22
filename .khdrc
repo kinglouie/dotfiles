@@ -15,13 +15,16 @@ khd void_unlisted_bind off
     shift + alt - r : khd -e "reload"
 
     # re-map/disable quit shortcut
-    cmd - q [ Firefox, iTerm2, Google Chrome, Safari ] : khd -p "cmd - w"
+    cmd - q [ iTerm2, Firefox, Google Chrome, Safari ] : khd -p "cmd - w"
 
     # open new terminal
     cmd - return : osascript -e 'tell application "iTerm2"' -e 'create window with default profile' -e 'end tell' || open -a /Applications/iTerm.app
 
     # open new finder
-    cmd + alt - return :  osascript -e 'tell application "Finder"' -e 'set myW to make new Finder window' -e 'set target of myW to home' -e 'activate' -e 'end tell'
+    cmd - 0x27 :  osascript -e 'tell application "Finder"' -e 'set myW to make new Finder window' -e 'set target of myW to home' -e 'activate' -e 'end tell'
+
+    # open new browser
+    cmd - 0x2A : osascript -e 'tell application "Safari"' -e 'make new document' -e 'activate' -e 'end tell' || open -a /Applications/Safari.app
 
 # MODE == TILING
 
