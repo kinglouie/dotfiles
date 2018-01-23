@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 DEFAULT_FOREGROUND=006 DEFAULT_BACKGROUND=235

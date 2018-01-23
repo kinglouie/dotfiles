@@ -2,8 +2,8 @@ khd void_unlisted_bind off
 
 # MODE SWITCHERS
 
-    shift - capslock :   khd -e "mode activate tiling"
-    tiling + shift - capslock :   khd -e "mode activate default"
+    alt - f :   khd -e "mode activate tiling"
+    tiling - capslock :   khd -e "mode activate default"
 
 # MODE == DEFAULT
 

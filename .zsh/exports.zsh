@@ -7,3 +7,4 @@ export LANG=de_DE.UTF-8
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
