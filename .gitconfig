@@ -1,3 +1,5 @@
 [user]
 	name = Matthias Hollerbach
 	email = matzehollerbach@web.de
+[core]
+	excludesfile = ~/.gitignore
