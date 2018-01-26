@@ -5,7 +5,7 @@ chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
 # chunkwm-tiling
 # ----------------------------------------------------------------------------
 chunkc set global_desktop_mode           bsp
-# chunkc set 2_desktop_mode              float
+chunkc set 3_desktop_mode              float
 # chunkc set 5_desktop_mode              monocle
 
 chunkc set global_desktop_offset_top     30
