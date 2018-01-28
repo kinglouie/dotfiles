@@ -33,23 +33,23 @@ khd void_unlisted_bind off
                     -e 'end tell'
 
     # open new safari window
-    #cmd - 0x2A : osascript \
-    #                -e 'tell application "Safari"' \
-    #                -e 'make new document' \
-    #                -e 'activate' \
-    #                -e 'end tell' \
-    #                || open -a /Applications/Safari.app
+    cmd - 0x2A : osascript \
+                    -e 'tell application "Safari"' \
+                    -e 'make new document' \
+                    -e 'activate' \
+                    -e 'end tell' \
+                    || open -a /Applications/Safari.app
 
     # open new ff nightly window
-    cmd - 0x2A : osascript \
-                    -e 'tell application "System Events"' \
-                    -e 'tell process "Firefox Nightly"' \
-                    -e 'click menu item "New Window" of menu "File" of menu bar 1' \
-                    -e 'end tell' \
-                    -e 'end tell' \
-                    -e 'tell application "Firefox Nightly"' \
-                    -e 'activate' -e 'end tell' \
-                    || open -a /Applications/Firefox\ Nightly.app
+    #cmd - 0x2A : osascript \
+    #                -e 'tell application "System Events"' \
+    #                -e 'tell process "Firefox Nightly"' \
+    #                -e 'click menu item "New Window" of menu "File" of menu bar 1' \
+    #                -e 'end tell' \
+    #                -e 'end tell' \
+    #                -e 'tell application "Firefox Nightly"' \
+    #                -e 'activate' -e 'end tell' \
+    #                || open -a /Applications/Firefox\ Nightly.app
 
 # MODE == TILING
 
