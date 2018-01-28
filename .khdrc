@@ -18,13 +18,38 @@ khd void_unlisted_bind off
     cmd - q [ iTerm2, Firefox Nightly, Firefox, Google Chrome, Safari ] : khd -p "cmd - w"
 
     # open new terminal
-    cmd - return : osascript -e 'tell application "iTerm2"' -e 'create window with default profile' -e 'end tell' || open -a /Applications/iTerm.app
+    cmd - return : osascript \
+                    -e 'tell application "iTerm2"' \
+                    -e 'create window with default profile' \
+                    -e 'end tell' \
+                    || open -a /Applications/iTerm.app
 
     # open new finder
-    cmd - 0x27 :  osascript -e 'tell application "Finder"' -e 'set myW to make new Finder window' -e 'set target of myW to home' -e 'activate' -e 'end tell'
+    cmd - 0x27 :  osascript \
+                    -e 'tell application "Finder"' \
+                    -e 'set myW to make new Finder window' \
+                    -e 'set target of myW to home' \
+                    -e 'activate' \
+                    -e 'end tell'
 
-    # open new browser
-    cmd - 0x2A : osascript -e 'tell application "Safari"' -e 'make new document' -e 'activate' -e 'end tell' || open -a /Applications/Safari.app
+    # open new safari window
+    #cmd - 0x2A : osascript \
+    #                -e 'tell application "Safari"' \
+    #                -e 'make new document' \
+    #                -e 'activate' \
+    #                -e 'end tell' \
+    #                || open -a /Applications/Safari.app
+
+    # open new ff nightly window
+    cmd - 0x2A : osascript \
+                    -e 'tell application "System Events"' \
+                    -e 'tell process "Firefox Nightly"' \
+                    -e 'click menu item "New Window" of menu "File" of menu bar 1' \
+                    -e 'end tell' \
+                    -e 'end tell' \
+                    -e 'tell application "Firefox Nightly"' \
+                    -e 'activate' -e 'end tell' \
+                    || open -a /Applications/Firefox\ Nightly.app
 
 # MODE == TILING
 
