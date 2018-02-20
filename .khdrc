@@ -7,7 +7,9 @@ khd void_unlisted_bind off
 
 # MODE == DEFAULT
 
-    khd mode default on_enter chunkc set focused_border_color 0x00ffffff;chunkc border::color 0x00ffffff
+    #khd mode default on_enter chunkc set focused_border_color 0x00ffffff;chunkc border::color 0x00ffffff
+
+    khd mode default on_enter chunkc tiling::window --toggle fade\
 
     - capslock : khd -p "- escape"
 
@@ -19,13 +21,22 @@ khd void_unlisted_bind off
 
     # open new terminal
     cmd - return : osascript \
+                    -e 'if application "Finder" is frontmost then' \
+                    -e 'tell application "Finder" to set dir_path to quoted form of (POSIX path of (first item of (get selection as alias list) as alias))' \
+                    -e 'else' \
+                    -e 'set dir_path to ""' \
+                    -e 'end if' \
                     -e 'tell application "iTerm2"' \
-                    -e 'create window with default profile' \
+                    -e 'set win to (create window with default profile)' \
+                    -e 'if dir_path is not equal to ""' \
+                    -e 'set sesh to (current session of win)' \
+                    -e 'tell sesh to write text "cd " & dir_path & ";clear"' \
+                    -e 'end if' \
                     -e 'end tell' \
                     || open -a /Applications/iTerm.app
 
     # open new finder
-    cmd - 0x27 :  osascript \
+    cmd - 0x2A :  osascript \
                     -e 'tell application "Finder"' \
                     -e 'set myW to make new Finder window' \
                     -e 'set target of myW to home' \
@@ -33,7 +44,7 @@ khd void_unlisted_bind off
                     -e 'end tell'
 
     # open new safari window
-    cmd - 0x2A : osascript \
+    cmd - 0x27 : osascript \
                     -e 'tell application "Safari"' \
                     -e 'make new document' \
                     -e 'activate' \
@@ -41,7 +52,7 @@ khd void_unlisted_bind off
                     || open -a /Applications/Safari.app
 
     # open new ff nightly window
-    #cmd - 0x2A : osascript \
+    #cmd - 0x27 : osascript \
     #                -e 'tell application "System Events"' \
     #                -e 'tell process "Firefox Nightly"' \
     #                -e 'click menu item "New Window" of menu "File" of menu bar 1' \
@@ -51,10 +62,22 @@ khd void_unlisted_bind off
     #                -e 'activate' -e 'end tell' \
     #                || open -a /Applications/Firefox\ Nightly.app
 
+    # open new sublime-text window
+    cmd - 0x29 : osascript \
+                    -e 'tell application "System Events"' \
+                    -e 'tell process "Sublime Text"' \
+                    -e 'click menu item "New Window" of menu "File" of menu bar 1' \
+                    -e 'end tell' \
+                    -e 'end tell' \
+                    -e 'tell application "Sublime Text"' \
+                    -e 'activate' -e 'end tell' \
+                    || open -a /Applications/Sublime\ Text.app
+
 # MODE == TILING
 
-    khd mode tiling on_enter: chunkc set preselect_border_color 0xffffff00;chunkc set focused_border_color 0xffffff00;chunkc border::color 0xffffff00
+    #khd mode tiling on_enter chunkc set preselect_border_color 0xffffff00;chunkc set focused_border_color 0xffffff00;chunkc border::color 0xffffff00
 
+    khd mode tiling on_enter chunkc tiling::window --toggle fade
 
     # equalize size of windows
     tiling + alt - 0 : chunkc tiling::desktop --equalize
