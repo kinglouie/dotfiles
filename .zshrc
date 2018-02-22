@@ -1,23 +1,22 @@
 
 source /usr/local/share/antigen/antigen.zsh
 
-antigen use oh-my-zsh
+# Antigen Bundles
 
-# Load plugins.
-source ~/.zsh/plugins.zsh
+    source ~/.zsh/plugins.zsh
 
-# Load the theme.
-source ~/.zsh/themes/powerlevel9k.zsh
+# Theme
+# "antigen apply" is called in the theme files
 
-# Tell Antigen that you're done.
-antigen apply
+    #source ~/.zsh/themes/powerlevel9k.zsh
+    source ~/.zsh/themes/pure.zsh
+
 
 # Load personal stuff
 
-source ~/.zsh/plugin-settings.zsh
-source ~/.zsh/aliases.zsh
-source ~/.zsh/completion.zsh
-source ~/.zsh/exports.zsh
-source ~/.zsh/history.zsh
-source ~/.zsh/init.zsh
-source ~/.zsh/options.zsh
+    source ~/.zsh/plugin-settings.zsh
+    source ~/.zsh/aliases.zsh
+    source ~/.zsh/exports.zsh
+    source ~/.zsh/history.zsh
+    source ~/.zsh/init.zsh
+    source ~/.zsh/options.zsh

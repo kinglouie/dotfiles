@@ -1,10 +1,19 @@
-antigen bundle docker
-antigen bundle gem
-antigen bundle npm
-antigen bundle pip
-antigen bundle python
+antigen use oh-my-zsh
 
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle marzocchi/zsh-notify
+antigen bundles <<EOBUNDLES
+
+    # oh my zsh bundles
+    docker
+    gem
+    npm
+    pip
+    python
+    vi-mode
+
+    # other bundles
+    zsh-users/zsh-syntax-highlighting
+    zsh-users/zsh-completions
+    zsh-users/zsh-autosuggestions
+    marzocchi/zsh-notify
+
+EOBUNDLES

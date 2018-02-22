@@ -1,5 +1,6 @@
 # plugin settings
 
+#fixes solarized dark color issue with autosuggestions
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
 
