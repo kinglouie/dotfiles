@@ -20,7 +20,7 @@ khd void_unlisted_bind off
     cmd - q [ iTerm2, Firefox Nightly, Firefox, Google Chrome, Safari ] : khd -p "cmd - w"
 
     # open new terminal
-    cmd - return : $HOME/.bin/openapp hyper
+    cmd - return : $HOME/.bin/openapp iterm2
 
     # open new finder
     cmd - 0x2A : $HOME/.bin/openapp finder
