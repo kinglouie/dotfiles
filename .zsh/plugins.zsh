@@ -9,6 +9,7 @@ antigen bundles <<EOBUNDLES
     pip
     python
     vi-mode
+    web-search
 
     # other bundles
     zsh-users/zsh-syntax-highlighting
