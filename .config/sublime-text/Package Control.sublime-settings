@@ -1,0 +1,36 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"install_prereleases":
+	[
+		"LESS"
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AutoFileName",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"Dockerfile Syntax Highlighting",
+		"EasyClangComplete",
+		"Emmet",
+		"Focus File on Sidebar",
+		"LESS",
+		"Package Control",
+		"Placeholders",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-annotations",
+		"SublimeLinter-cppcheck",
+		"SublimeLinter-csslint",
+		"SublimeLinter-json",
+		"SublimeLinter-php",
+		"SublimeLinter-phpcs",
+		"Terminal",
+		"TrailingSpaces"
+	]
+}
