@@ -20,3 +20,4 @@ source /usr/local/share/antigen/antigen.zsh
     source ~/.zsh/history.zsh
     source ~/.zsh/init.zsh
     source ~/.zsh/options.zsh
+    source ~/.zsh/path.zsh
