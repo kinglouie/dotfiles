@@ -13,11 +13,17 @@ source /usr/local/share/antigen/antigen.zsh
 
 
 # Load personal stuff
+files=(
+    colors
+    plugin-settings
+    aliases
+    exports
+    history
+    init
+    options
+    path
+)
 
-    source ~/.zsh/plugin-settings.zsh
-    source ~/.zsh/aliases.zsh
-    source ~/.zsh/exports.zsh
-    source ~/.zsh/history.zsh
-    source ~/.zsh/init.zsh
-    source ~/.zsh/options.zsh
-    source ~/.zsh/path.zsh
+for file in $files; do
+  source "$HOME/.zsh/$file.zsh"
+done

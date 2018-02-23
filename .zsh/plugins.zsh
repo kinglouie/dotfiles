@@ -12,6 +12,8 @@ antigen bundles <<EOBUNDLES
     web-search
 
     # other bundles
+    chriskempson/base16-shell
+    #martinlindhe/base16-iterm2
     zsh-users/zsh-syntax-highlighting
     zsh-users/zsh-completions
     zsh-users/zsh-autosuggestions

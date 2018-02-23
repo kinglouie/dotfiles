@@ -148,20 +148,22 @@ set gdefault
 " - A terminal capable of modifying colors in the 256 color space (not Terminal.app https://goo.gl/SQTrDd)
 " - A terminal which uses the base16-default.dark.256 theme (https://goo.gl/Dk9cYv)
 " - A shell with base16-based ANSI colors (https://github.com/chriskempson/base16-shell)
-"if dein#tap('base16-vim')
-"  " Specify that vim should use the dark variation
-"  set background=dark
-"  " Use colors from the 256 coolor space.
-"   let base16colorspace=256
-"  " Set colorscheme.
-"  silent! colorscheme base16-default-dark
-"else
-"  colorscheme delek
-"end
-
-if dein#tap('vim-colors-solarized')
+if dein#tap('base16-vim')
+  " fixes hyper color issue
+  set termguicolors
+  " Specify that vim should use the dark variation
   set background=dark
-  silent! colorscheme solarized
+  " Use colors from the 256 coolor space.
+   let base16colorspace=256
+  " Set colorscheme.
+  silent! colorscheme base16-solarized-dark
 else
   colorscheme delek
 end
+
+"if dein#tap('vim-colors-solarized')
+"  set background=dark
+"  silent! colorscheme solarized
+"else
+"  colorscheme delek
+"end

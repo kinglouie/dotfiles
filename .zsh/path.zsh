@@ -1,1 +1,3 @@
-PATH="$HOME/.bin:$PATH"
+path+=("/usr/local/bin/")
+path=("$HOME/.bin" $path)
+export PATH
