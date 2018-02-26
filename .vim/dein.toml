@@ -41,11 +41,6 @@ hook_source = '''
 [[plugins]]
 repo = 'chriskempson/base16-vim'
 
-# Colorscheme
-# https://github.com/altercation/vim-colors-solarized
-[[plugins]]
-repo = 'altercation/vim-colors-solarized'
-
 # Status bar
 # https://github.com/vim-airline/vim-airline'
 [[plugins]]
