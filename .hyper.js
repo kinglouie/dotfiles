@@ -4,7 +4,13 @@ module.exports = {
     updateChannel: 'canary',
 
     fontSize: 15,
-    fontFamily: '"MesloLGSDZ Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"FuraCode Nerd Font", monospace',
+    css: `
+      x-screen x-row { font-variant-ligatures: contextual; }
+    `,
+    termCSS: `
+      x-screen x-row { font-variant-ligatures: contextual; }
+    `,
     base16: {
       scheme: 'solarized'
     },
