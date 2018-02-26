@@ -11,7 +11,264 @@
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
 	<key>Custom Color Presets</key>
-	<dict/>
+	<dict>
+		<key>base16-solarized-dark</key>
+		<dict>
+			<key>Ansi 0 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.21176470999999999</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.16862746000000001</real>
+				<key>Red Component</key>
+				<real>0.0</real>
+			</dict>
+			<key>Ansi 1 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.18431373000000001</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.19607843</real>
+				<key>Red Component</key>
+				<real>0.86274510000000004</real>
+			</dict>
+			<key>Ansi 10 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.25882354000000002</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.21176470999999999</real>
+				<key>Red Component</key>
+				<real>0.02745098</real>
+			</dict>
+			<key>Ansi 11 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.45882352999999998</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.43137255000000002</real>
+				<key>Red Component</key>
+				<real>0.34509804999999999</real>
+			</dict>
+			<key>Ansi 12 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.58823530000000002</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.58039220000000002</real>
+				<key>Red Component</key>
+				<real>0.51372549999999995</real>
+			</dict>
+			<key>Ansi 13 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.83529410000000004</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.9098039</real>
+				<key>Red Component</key>
+				<real>0.93333334000000001</real>
+			</dict>
+			<key>Ansi 14 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.50980395000000001</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.21176470999999999</real>
+				<key>Red Component</key>
+				<real>0.82745100000000005</real>
+			</dict>
+			<key>Ansi 15 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.89019610000000005</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.96470590000000001</real>
+				<key>Red Component</key>
+				<real>0.99215686000000003</real>
+			</dict>
+			<key>Ansi 2 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.0</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.59999999999999998</real>
+				<key>Red Component</key>
+				<real>0.52156866000000002</real>
+			</dict>
+			<key>Ansi 3 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.0</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.53725489999999998</real>
+				<key>Red Component</key>
+				<real>0.70980394000000002</real>
+			</dict>
+			<key>Ansi 4 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.82352939999999997</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.54509806999999999</real>
+				<key>Red Component</key>
+				<real>0.14901961</real>
+			</dict>
+			<key>Ansi 5 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.76862746000000004</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.44313725999999998</real>
+				<key>Red Component</key>
+				<real>0.42352941999999999</real>
+			</dict>
+			<key>Ansi 6 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.59607845999999998</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.63137259999999995</real>
+				<key>Red Component</key>
+				<real>0.16470588999999999</real>
+			</dict>
+			<key>Ansi 7 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.63137259999999995</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.63137259999999995</real>
+				<key>Red Component</key>
+				<real>0.57647060000000006</real>
+			</dict>
+			<key>Ansi 8 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.51372549999999995</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.48235294000000001</real>
+				<key>Red Component</key>
+				<real>0.39607843999999998</real>
+			</dict>
+			<key>Ansi 9 Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.086274509999999999</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.29411766</real>
+				<key>Red Component</key>
+				<real>0.79607844000000005</real>
+			</dict>
+			<key>Background Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.21176470999999999</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.16862746000000001</real>
+				<key>Red Component</key>
+				<real>0.0</real>
+			</dict>
+			<key>Bold Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.63137259999999995</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.63137259999999995</real>
+				<key>Red Component</key>
+				<real>0.57647060000000006</real>
+			</dict>
+			<key>Cursor Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.63137259999999995</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.63137259999999995</real>
+				<key>Red Component</key>
+				<real>0.57647060000000006</real>
+			</dict>
+			<key>Cursor Text Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.21176470999999999</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.16862746000000001</real>
+				<key>Red Component</key>
+				<real>0.0</real>
+			</dict>
+			<key>Foreground Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.63137259999999995</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.63137259999999995</real>
+				<key>Red Component</key>
+				<real>0.57647060000000006</real>
+			</dict>
+			<key>Selected Text Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.63137259999999995</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.63137259999999995</real>
+				<key>Red Component</key>
+				<real>0.57647060000000006</real>
+			</dict>
+			<key>Selection Color</key>
+			<dict>
+				<key>Blue Component</key>
+				<real>0.45882352999999998</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.43137255000000002</real>
+				<key>Red Component</key>
+				<real>0.34509804999999999</real>
+			</dict>
+		</dict>
+	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>05694F95-3940-4030-9737-C866B97DBDA1</string>
 	<key>DisableFullscreenTransparency</key>
@@ -27,9 +284,9 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Synced/mh_project_personal/ansible-macos-playbook/files</string>
+	<string>~/.antigen/bundles/martinlindhe/base16-iterm2/itermcolors</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
+	<string>{971, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -67,11 +324,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>531 147 636 223 0 0 3008 1692 </string>
+	<string>531 142 636 667 0 0 3008 1692 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>488 817 918 401 0 0 3008 1692 </string>
+	<string>375 1274 918 401 0 0 3008 1692 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>30 40 1466 776 0 0 3008 1692 </string>
+	<string>30 846 1466 788 0 0 3008 1692 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>31 852 722 776 0 0 3008 1692 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -656,7 +913,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGLDZNerdFontC-RegularForPowerline 14</string>
+			<string>MesloLGMNerdFontC-RegularForPowerline 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -769,7 +1026,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/mh/Synced/mh_project_personal/ansible-macos-playbook/files</string>
+	<string>/Users/mh/.config/iterm2</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -779,7 +1036,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-02-20T10:24:18Z</date>
+	<date>2018-02-23T10:53:47Z</date>
 	<key>Secure Input</key>
 	<false/>
 	<key>ShowBookmarkName</key>
