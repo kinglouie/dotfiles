@@ -11,10 +11,12 @@
 	[
 		"A File Icon",
 		"AutoFileName",
+		"Better CoffeeScript",
 		"BracketHighlighter",
 		"Color Highlighter",
 		"Dockerfile Syntax Highlighting",
 		"EasyClangComplete",
+		"EditorConfig",
 		"Emmet",
 		"Focus File on Sidebar",
 		"LESS",
@@ -30,7 +32,6 @@
 		"SublimeLinter-json",
 		"SublimeLinter-php",
 		"SublimeLinter-phpcs",
-		"Terminal",
-		"TrailingSpaces"
+		"Terminal"
 	]
 }
