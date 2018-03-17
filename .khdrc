@@ -7,9 +7,8 @@ khd void_unlisted_bind off
 
 # MODE == DEFAULT
 
-    #khd mode default on_enter chunkc set focused_border_color 0x00ffffff;chunkc border::color 0x00ffffff
-
-    khd mode default on_enter chunkc tiling::window --toggle fade
+    khd mode default on_enter chunkc set focused_border_color 0x00ffffff;chunkc border::color 0x00ffffff
+    #khd mode default on_enter chunkc tiling::window --toggle fade
 
     - capslock : khd -p "- escape"
 
@@ -33,9 +32,8 @@ khd void_unlisted_bind off
 
 # MODE == TILING
 
-    #khd mode tiling on_enter chunkc set preselect_border_color 0xffffff00;chunkc set focused_border_color 0xffffff00;chunkc border::color 0xffffff00
-
-    khd mode tiling on_enter chunkc tiling::window --toggle fade
+    khd mode tiling on_enter chunkc set preselect_border_color 0xffffff00;chunkc set focused_border_color 0xffffff00;chunkc border::color 0xffffff00
+    #khd mode tiling on_enter chunkc tiling::window --toggle fade
 
     # equalize size of windows
     tiling + alt - 0 : chunkc tiling::desktop --equalize

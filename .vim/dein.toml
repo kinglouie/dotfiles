@@ -41,6 +41,8 @@ hook_source = '''
 [[plugins]]
 repo = 'chriskempson/base16-vim'
 
+
+
 # Status bar
 # https://github.com/vim-airline/vim-airline'
 [[plugins]]
@@ -50,13 +52,19 @@ hook_source = '''
   " Disable autoloading extension in runtimepath
   let g:airline#extensions#disable_rtp_load = 1
   " Manually enable extensions
-  let g:airline_extensions = ['quickfix', 'hunks']
+  let g:airline_extensions = ['quickfix', 'hunks', 'tabline']
   " Disable airline in the preview window
   let g:airline_exclude_preview = 1
   " Performance optimization by not re-evaluating the colors of the theme.
   let g:airline#themes#base16#constant = 1
+
+  let g:airline_theme="base16"
+
   " Don't display crypt.
   let g:airline_detect_crypt = 0
+
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#fnamemod = ':t' " filename only
 
   " Show vim-signify change hunks.
   let g:airline#extensions#hunks#enabled = 1
@@ -69,6 +77,9 @@ hook_source = '''
     let g:airline_extensions = g:airline_extensions + ['neomake']
   endif
 '''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
 
 # UI for editing commit messages
 # https://github.com/rhysd/committia.vim
@@ -103,6 +114,54 @@ hook_source = '''
 hook_add = '''
   nnoremap <silent> <leader>tu :<C-u>UndotreeToggle<cr>
 '''
+
+
+
+# File Explorer
+# https://github.com/Shougo/vimfiler.vim
+# ---------------------------------------------------------------------------
+# ,fb     - open vimfiler in buffer
+# ,fe     - open vimfiler explorer
+#
+#   t     - toggle tree
+#   T     - toggle tree recursively
+#   q     - close vimfiler
+#   <tab> - switch to other window
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+depends = 'unite.vim'
+on_map = {n = '<Plug>'}
+on_if = "isdirectory(bufname('%'))"
+hook_source = '''
+
+  autocmd FileType vimfiler setlocal nonu
+  autocmd FileType vimfiler setlocal nornu
+
+  let g:vimfiler_as_default_explorer = 1
+
+  " Fancier icons
+  let g:webdevicons_enable_vimfiler = 1
+  let g:vimfiler_tree_leaf_icon = ' '
+  let g:vimfiler_tree_opened_icon = '▾'
+  let g:vimfiler_tree_closed_icon = '▸'
+  "let g:vimfiler_file_icon = ' '
+  let g:vimfiler_readonly_file_icon = '✗'
+  let g:vimfiler_marked_file_icon = '✓'
+
+  call vimfiler#custom#profile('default', 'context', {
+      \ 'safe' : 0,
+      \ 'auto_expand' : 1,
+      \ 'parent' : 0,
+      \ 'columns' : 'devicons:size:time',
+      \ 'explorer_columns' : 'devicons',
+      \ })
+
+'''
+hook_add = '''
+  nnoremap <silent> <leader>fb   :<C-u>VimFiler -invisible<CR>
+  nnoremap <leader>fe            :<C-u>VimFilerExplorer<CR>
+'''
+
 
 # United interfaces
 # @todo Denite once plugin support is there.
@@ -195,6 +254,14 @@ hook_add = '''
   noremap <leader>x <Plug>(unite_redraw)
 '''
 
+
+# VIM-devicons
+# https://github.com/ryanoasis/vim-devicons/
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+
+
 # Show a diff using Vim its sign column.
 # https://github.com/mhinz/vim-signify
 [[plugins]]
@@ -231,11 +298,6 @@ hook_source = '''
 # Visual experience
 ###########################################################
 
-# Rainbow parentheses
-# https://github.com/junegunn/rainbow_parentheses.vim
-[[plugins]]
-repo = 'junegunn/rainbow_parentheses.vim'
-
 # Highlight matches for the word under the cursor
 # https://github.com/qstrahl/vim-matchmaker
 [[plugins]]
@@ -245,11 +307,6 @@ hook_source = '''
   " Avoid conflicts with EasyMotion
   let g:matchmaker_matchpriority = 0
 '''
-
-# Folding (@todo)
-# https://github.com/LeafCage/foldCC.vim
-[[plugins]]
-repo = 'LeafCage/foldCC.vim'
 
 # Tools
 ##########################################################
@@ -397,42 +454,6 @@ hook_source = '''
 '''
 hook_add = '''
   nnoremap <silent> <leader>qm :<C-u>QuickRun markdown<CR>
-'''
-
-# File Explorer
-# https://github.com/Shougo/vimfiler.vim
-# ---------------------------------------------------------------------------
-# ,fb     - open vimfiler in buffer
-# ,fe     - open vimfiler explorer
-#
-#   t     - toggle tree
-#   T     - toggle tree recursively
-#   q     - close vimfiler
-#   <tab> - switch to other window
-[[plugins]]
-repo = 'Shougo/vimfiler.vim'
-depends = 'unite.vim'
-on_map = {n = '<Plug>'}
-on_if = "isdirectory(bufname('%'))"
-hook_source = '''
-  let g:vimfiler_as_default_explorer = 1
-
-  " Fancier icons
-  let g:vimfiler_tree_leaf_icon = ' '
-  let g:vimfiler_tree_opened_icon = '▾'
-  let g:vimfiler_tree_closed_icon = '▸'
-  let g:vimfiler_file_icon = ' '
-  let g:vimfiler_readonly_file_icon = '✗'
-  let g:vimfiler_marked_file_icon = '✓'
-
-  autocmd MyAutoCmd FileType vimfiler call s:vimfiler_settings()
-  function! s:vimfiler_settings()
-    nmap <buffer> <Tab> <Plug>(vimfiler_switch_to_other_window)
-  endfunction
-'''
-hook_add = '''
-  nnoremap <silent> <leader>fb   :<C-u>VimFiler -invisible<CR>
-  nnoremap <leader>fe            :<C-u>VimFilerExplorer<CR>
 '''
 
 # Gist manager
