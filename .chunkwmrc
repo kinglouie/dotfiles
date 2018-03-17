@@ -12,6 +12,19 @@ chunkc set global_desktop_offset_left    30
 chunkc set global_desktop_offset_right   30
 chunkc set global_desktop_offset_gap     15
 
+#non work spaces
+chunkc set 1_desktop_offset_top        103
+chunkc set 1_desktop_offset_bottom     80
+chunkc set 1_desktop_offset_left       190
+chunkc set 1_desktop_offset_right      190
+chunkc set 1_desktop_offset_gap        60
+chunkc set 2_desktop_offset_top        103
+chunkc set 2_desktop_offset_bottom     80
+chunkc set 2_desktop_offset_left       190
+chunkc set 2_desktop_offset_right      190
+chunkc set 2_desktop_offset_gap        60
+
+# spaces on small monitor
 chunkc set 7_desktop_offset_top        23
 chunkc set 7_desktop_offset_bottom     0
 chunkc set 7_desktop_offset_left       0
@@ -66,3 +79,4 @@ chunkc tiling::rule -s float -o Mail                    -n \"Neue E-Mail\"
 chunkc tiling::rule -s float -o Mail                    -n \"Re:\"
 chunkc tiling::rule -s float -o iTunes                  -n \"Titelinformationen\"
 chunkc tiling::rule -s float -o iTunes                  -n \"Informationen zu mehreren Titeln\"
+chunkc tiling::rule -s float -o Rechner
