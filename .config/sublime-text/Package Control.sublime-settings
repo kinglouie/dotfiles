@@ -32,6 +32,7 @@
 		"SublimeLinter-json",
 		"SublimeLinter-php",
 		"SublimeLinter-phpcs",
+		"Swift",
 		"Terminal",
 		"TOML"
 	]
