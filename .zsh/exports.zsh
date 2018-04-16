@@ -10,4 +10,3 @@ export MANPAGER='less -X';
 
 # delay for vi mode
 export KEYTIMEOUT=1
-
