@@ -6,23 +6,17 @@ chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
 # ----------------------------------------------------------------------------
 chunkc set global_desktop_mode           bsp
 
-chunkc set global_desktop_offset_top     53
-chunkc set global_desktop_offset_bottom  30
-chunkc set global_desktop_offset_left    30
-chunkc set global_desktop_offset_right   30
-chunkc set global_desktop_offset_gap     15
+chunkc set global_desktop_offset_top     100
+chunkc set global_desktop_offset_bottom  80
+chunkc set global_desktop_offset_left    190
+chunkc set global_desktop_offset_right   190
+chunkc set global_desktop_offset_gap     60
 
-#non work spaces
-chunkc set 1_desktop_offset_top        103
-chunkc set 1_desktop_offset_bottom     80
-chunkc set 1_desktop_offset_left       190
-chunkc set 1_desktop_offset_right      190
-chunkc set 1_desktop_offset_gap        60
-chunkc set 2_desktop_offset_top        103
-chunkc set 2_desktop_offset_bottom     80
-chunkc set 2_desktop_offset_left       190
-chunkc set 2_desktop_offset_right      190
-chunkc set 2_desktop_offset_gap        60
+# chunkc set global_desktop_offset_top     53
+# chunkc set global_desktop_offset_bottom  30
+# chunkc set global_desktop_offset_left    30
+# chunkc set global_desktop_offset_right   30
+# chunkc set global_desktop_offset_gap     15
 
 # spaces on small monitor
 chunkc set 7_desktop_offset_top        23
@@ -35,6 +29,11 @@ chunkc set 8_desktop_offset_bottom     0
 chunkc set 8_desktop_offset_left       0
 chunkc set 8_desktop_offset_right      0
 chunkc set 8_desktop_offset_gap        0
+chunkc set 9_desktop_offset_top        23
+chunkc set 9_desktop_offset_bottom     0
+chunkc set 9_desktop_offset_left       0
+chunkc set 9_desktop_offset_right      0
+chunkc set 9_desktop_offset_gap        0
 
 
 chunkc set desktop_padding_step_size     10.0

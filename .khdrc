@@ -88,6 +88,9 @@ khd void_unlisted_bind off
     tiling + shift + alt - 4 : chunkc tiling::window --send-to-desktop 4
     tiling + shift + alt - 5 : chunkc tiling::window --send-to-desktop 5
     tiling + shift + alt - 6 : chunkc tiling::window --send-to-desktop 6
+    tiling + shift + alt - 7 : chunkc tiling::window --send-to-desktop 7
+    tiling + shift + alt - 8 : chunkc tiling::window --send-to-desktop 8
+    tiling + shift + alt - 9 : chunkc tiling::window --send-to-desktop 9
 
     # send window to desktop and switch desktop
     # @todo requires mission control shortcuts for desktop moves.
@@ -97,6 +100,9 @@ khd void_unlisted_bind off
     tiling + shift + cmd - 4 : chunkc tiling::window -d 4; khd -p "ctrl - 4"
     tiling + shift + cmd - 5 : chunkc tiling::window -d 5; khd -p "ctrl - 5"
     tiling + shift + cmd - 6 : chunkc tiling::window -d 6; khd -p "ctrl - 6"
+    tiling + shift + cmd - 7 : chunkc tiling::window -d 7; khd -p "ctrl - 7"
+    tiling + shift + cmd - 8 : chunkc tiling::window -d 8; khd -p "ctrl - 8"
+    tiling + shift + cmd - 9 : chunkc tiling::window -d 9; khd -p "ctrl - 9"
 
     # increase region size
     tiling + alt + cmd - h  : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge west
