@@ -3,6 +3,7 @@
 " Enable syntax color
 syntax enable
 " Needs to run after dein#end()
+filetype off
 filetype plugin indent on
 " Use relative line numbers if available.
 if exists("+relativenumber") | set relativenumber | else | set number | endif
@@ -171,3 +172,5 @@ if dein#tap('base16-vim')
 else
   colorscheme delek
 end
+
+highlight Matchmaker guifg=DarkGreen guibg=LightYellow
