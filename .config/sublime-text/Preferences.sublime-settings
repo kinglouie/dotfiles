@@ -1,9 +1,11 @@
 {
+	"color_scheme": "Packages/ayu/ayu-mirage.tmTheme",
 	"font_face": "Fira Code",
 	"ignored_packages":
 	[
 		"Vintage"
 	],
 	"open_files_in_new_window": false,
+	"theme": "ayu-mirage.sublime-theme",
 	"translate_tabs_to_spaces": true
 }
