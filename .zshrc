@@ -14,7 +14,6 @@ source /usr/local/share/antigen/antigen.zsh
 
 # Load personal stuff
 files=(
-    colors
     plugin-settings
     aliases
     exports

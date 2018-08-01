@@ -139,36 +139,11 @@ set gdefault
 
 " Theme
 " ---------------------------------------------------------------------------
-" Theme: base16-solarized-dark.256
-" Use the 256 variation to get additional shades of gray.
 
-" Set the number of colors to 256
-set t_Co=256
-
-" Setup base16 colorscheme assuming
-" - A terminal capable of modifying colors in the 256 color space (not Terminal.app https://goo.gl/SQTrDd)
-" - A terminal which uses the base16-default.dark.256 theme (https://goo.gl/Dk9cYv)
-" - A shell with base16-based ANSI colors (https://github.com/chriskempson/base16-shell)
-if dein#tap('base16-vim')
-
-  " fixes hyper color issue
-  set termguicolors
-
-  " Specify that vim should use the dark variation
-  set background=dark
-
-  " Use colors from the 256 coolor space.
-  "let base16colorspace=256
-
-  " Set colorscheme.
-  "silent! colorscheme base16-solarized-dark
-
-  if filereadable(expand("~/.vimrc_background"))
-    let base16colorspace=256
-    source ~/.vimrc_background
-  endif
-  set background=dark
-
+if dein#tap('ayu-vim')
+  set termguicolors     " enable true colors support
+  let ayucolor="mirage" " for mirage version of theme
+  colorscheme ayu
 else
   colorscheme delek
 end
