@@ -11,14 +11,8 @@ module.exports = {
     termCSS: `
       x-screen x-row { font-variant-ligatures: contextual; }
     `,
-    base16: {
-      scheme: 'solarized'
-    },
-
   },
 
-  plugins: [
-    'hypersixteen'
-  ],
+  plugins: ["hyper-ayu-mirage"],
 
 };
