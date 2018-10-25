@@ -18,17 +18,17 @@ khd void_unlisted_bind off
     # re-map/disable quit shortcut
     cmd - q [ iTerm2, Firefox Nightly, Firefox, Google Chrome, Safari ] : khd -p "cmd - w"
 
-    # open new terminal
-    cmd - return : $HOME/.bin/openapp iterm2
+    # open new terminal key: +
+    cmd - 0x1E : $HOME/.bin/openapp iterm2
 
-    # open new finder
+    # open new finder key: #
     cmd - 0x2A : $HOME/.bin/openapp finder
 
-    # open new browser window
+    # open new browser window key: ä
     cmd - 0x27 : $HOME/.bin/openapp safari
 
-    # open new sublime-text window
-    cmd - 0x29 : $HOME/.bin/openapp sublime-text
+    # open new sublime-text window key: ü
+    cmd - 0x21 : $HOME/.bin/openapp sublime-text
 
 # MODE == TILING
 
