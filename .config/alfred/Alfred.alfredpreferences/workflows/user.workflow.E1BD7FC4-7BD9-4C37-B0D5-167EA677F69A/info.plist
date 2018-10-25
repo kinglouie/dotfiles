@@ -108,14 +108,13 @@
 					</dict>
 				</array>
 				<key>includesystem</key>
-				<false/>
+				<true/>
 				<key>keyword</key>
 				<string>emfrom</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>scopes</key>
 				<array>
-					<string>~/Desktop/100MEDIA</string>
 					<string>~/Library/Mail</string>
 				</array>
 				<key>subtext</key>
@@ -123,7 +122,9 @@
 				<key>title</key>
 				<string>Search Mail.app by Author</string>
 				<key>types</key>
-				<array/>
+				<array>
+					<string>com.apple.mail.emlx</string>
+				</array>
 				<key>withspace</key>
 				<true/>
 			</dict>
