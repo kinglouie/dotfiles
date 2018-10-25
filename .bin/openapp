@@ -84,13 +84,6 @@ elif [ $1 = "hyper" ]; then
 
 elif [ $1 = "sublime-text" ]; then
 	{
-	osascript <<-EOD
-		tell application "System Events"
-				tell process "Sublime Text"
-						click menu item "New Window" of menu "File" of menu bar 1
-						activate
-				end tell
-		end tell
-	EOD
-	} || open -a /Applications/Sublime\ Text.app
+    /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n "new File"
+  }
 fi
