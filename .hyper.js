@@ -5,12 +5,6 @@ module.exports = {
 
     fontSize: 15,
     fontFamily: '"FuraCode Nerd Font", monospace',
-    css: `
-      x-screen x-row { font-variant-ligatures: contextual; }
-    `,
-    termCSS: `
-      x-screen x-row { font-variant-ligatures: contextual; }
-    `,
   },
 
   plugins: ["hyper-ayu-mirage"],
