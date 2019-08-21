@@ -1,0 +1,90 @@
+# MODES
+
+    :: default : yabai -m config window_border off
+    :: tiling : yabai -m config window_border on
+
+    alt - f ; tiling
+    tiling < f ; default
+
+
+# MODE == DEFAULT
+
+    # open new terminal key: +
+    cmd - 0x1E : $HOME/.bin/openapp iterm2
+
+    # open new finder key: #
+    cmd - 0x2A : $HOME/.bin/openapp finder
+
+    # open new browser window key: ä
+    cmd - 0x27 : $HOME/.bin/openapp safari
+
+    # open new sublime-text window key: ü
+    cmd - 0x21 : $HOME/.bin/openapp sublime-text
+
+# MODE == TILING
+
+    # focus window
+    tiling < h : yabai -m window --focus west
+    tiling < j : yabai -m window --focus south
+    tiling < k : yabai -m window --focus north
+    tiling < l : yabai -m window --focus east
+
+    # swap window
+    tiling < alt - h : yabai -m window --swap west
+    tiling < alt - j : yabai -m window --swap south
+    tiling < alt - k : yabai -m window --swap north
+    tiling < alt - l : yabai -m window --swap east
+
+    # move window
+    tiling < cmd - h : yabai -m window --warp west
+    tiling < cmd - j : yabai -m window --warp south
+    tiling < cmd - k : yabai -m window --warp north
+    tiling < cmd - l : yabai -m window --warp east
+
+
+
+    # balance size of windows
+    tiling < alt - 0 : yabai -m space --balance
+
+    # make floating window fill screen
+    tiling < alt - up     : yabai -m window --grid 1:1:0:0:1:1
+
+    # make floating window fill left-half of screen
+    tiling < alt - left   : yabai -m window --grid 1:2:0:0:1:1
+
+    # make floating window fill right-half of screen
+    tiling < alt - right  : yabai -m window --grid 1:2:1:0:1:1
+
+
+
+    # rotate tree
+    tiling < alt - r : yabai -m space --rotate 90
+
+    # mirror tree y-axis
+    tiling < alt - y : yabai -m space --mirror y-axis
+
+    # mirror tree x-axis
+    tiling < alt - x : yabai -m space --mirror x-axis
+
+    # toggle desktop offset
+    tiling < alt - a : yabai -m space --toggle padding; yabai -m space --toggle gap
+
+    # toggle window parent zoom
+    tiling < alt - d : yabai -m window --toggle zoom-parent
+
+    # toggle window fullscreen zoom
+    tiling < alt - f : yabai -m window --toggle zoom-fullscreen
+
+    # toggle window native fullscreen
+    tiling < shift + alt - f : yabai -m window --toggle native-fullscreen
+
+    # toggle window split type
+    tiling < alt - e : yabai -m window --toggle split
+
+    # float / unfloat window and center on screen
+    tiling < alt - t : yabai -m window --toggle float;\
+              yabai -m window --grid 4:4:1:1:2:2
+
+    # change layout of desktop
+    tiling < ctrl + alt - a : yabai -m space --layout bsp
+    tiling < ctrl + alt - d : yabai -m space --layout float
