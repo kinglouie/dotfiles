@@ -4,7 +4,7 @@
     :: tiling : yabai -m config window_border on
 
     alt - f ; tiling
-    tiling < f ; default
+    tiling < escape ; default
 
 
 # MODE == DEFAULT
