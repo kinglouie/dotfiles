@@ -18,8 +18,8 @@
     # open new browser window key: ä
     cmd - 0x27 : $HOME/.bin/openapp safari
 
-    # open new sublime-text window key: ü
-    cmd - 0x21 : $HOME/.bin/openapp sublime-text
+    # open new vscode window key: ü
+    cmd - 0x21 : $HOME/.bin/openapp vscode
 
 # MODE == TILING
 

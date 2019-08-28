@@ -86,4 +86,9 @@ elif [ $1 = "sublime-text" ]; then
 	{
     /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n "new File"
   }
+
+elif [ $1 = "vscode" ]; then
+	{
+    /usr/local/bin/code -n
+  }
 fi
