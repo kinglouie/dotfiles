@@ -1,7 +1,7 @@
 # MODES
 
-    :: default : yabai -m config window_border off
-    :: tiling : yabai -m config window_border on
+    :: default : yabai -m config active_window_border_color   0x00ffffff
+    :: tiling : yabai -m config active_window_border_color   0xffffffff
 
     alt - f ; tiling
     tiling < escape ; default
@@ -88,3 +88,9 @@
     # change layout of desktop
     tiling < ctrl + alt - a : yabai -m space --layout bsp
     tiling < ctrl + alt - d : yabai -m space --layout float
+
+    
+    tiling < alt - p : yabai -m window --toggle sticky;\
+          yabai -m window --toggle topmost;\
+          yabai -m window --toggle border;\
+          yabai -m window --toggle pip
