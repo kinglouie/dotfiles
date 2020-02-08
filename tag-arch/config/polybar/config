@@ -1,0 +1,223 @@
+[bar/bar]
+background = #000000
+foreground = #b6a49b
+width                    = 100%
+height                   = 40
+radius                   = 0
+line-size                = 0
+top                      = true
+border-bottom-size       = 0
+padding-left             = 0
+padding-right            = 0
+
+fixed-center = true
+font-0 = San Francisco Display Regular:size=15;1
+font-1 = unifont:fontformat=truetype:size=24:antialias=false;0
+font-2 = "MaterialIcons:size=24:antialias=false;1"
+font-3 = "icomoon-extended-ultra:size=24:antialias=false;1"
+font-4 = "Ubuntu Nerd Font:size=24:antialias=false;1"
+font-5 = FontAwesome:size=20;1
+
+modules-left = title 
+modules-center = bspwm
+modules-right = date alsa eth poweroff 
+module-margin = 2
+
+;left - center - right - none
+tray-position = none
+tray-maxsize = 24
+tray-detached = false
+tray-transparent = false
+tray-padding = 2
+tray-scale = 1.0
+
+
+override-redirect = true
+offset-x = 0
+offset-y = 0
+
+padding = 0
+
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+wm-name = bar
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+[module/title]
+type = internal/xwindow
+
+
+[module/bspwm]
+type = internal/bspwm
+
+; Only show workspaces defined on the same output as the bar
+; NOTE: The bspwm and XRandR monitor names must match, which they do by default.
+; But if you rename your bspwm monitors with bspc -n this option will no longer
+; behave correctly.
+; Default: true
+pin-workspaces = true
+
+; Output mode flags after focused state label
+; Default: false
+inline-mode = false
+
+; Create click handler used to focus workspace
+; Default: true
+enable-click = true
+
+; Create scroll handlers used to cycle workspaces
+; Default: true
+enable-scroll = false
+
+; Set the scroll cycle direction 
+; Default: true
+reverse-scroll = false
+
+; Use fuzzy (partial) matching on labels when assigning 
+; icons to workspaces
+; Example: code;♚ will apply the icon to all workspaces 
+; containing 'code' in the label
+; Default: false
+fuzzy-match = true
+
+; ws-icon-[0-9]+ = label;icon
+; Note that the label needs to correspond with the bspwm workspace name
+ws-icon-0 = code;1
+ws-icon-1 = office;2
+ws-icon-2 = graphics;3
+ws-icon-3 = mail;4
+ws-icon-4 = web;5
+ws-icon-default = x
+
+; Available tags:
+;   <label-monitor>
+;   <label-state> - gets replaced with <label-(focused|urgent|occupied|empty)>
+;   <label-mode> - gets replaced with <label-(monocle|tiled|fullscreen|floating|locked|sticky|private)>
+; Default: <label-state>
+format = <label-state> <label-mode>
+
+; Available tokens:
+;   %name%
+; Default: %name%
+label-monitor = %name%
+
+; If any values for label-dimmed-N are defined, the workspace/mode
+; colors will get overridden with those values if the monitor is out of focus
+; To only override workspaces in a specific state, use:
+;   label-dimmed-focused
+;   label-dimmed-occupied
+;   label-dimmed-urgent
+;   label-dimmed-empty
+label-dimmed-foreground = #fff
+label-dimmed-underline = #fff
+label-dimmed-focused-background = #f00
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-focused = %icon%
+label-focused-foreground = #ffffff
+label-focused-background = #3f3f3f
+label-focused-underline = #fba922
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-occupied = %icon%
+label-occupied-underline = #555555
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-urgent = %icon%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-underline = #9b0a20
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-empty = %icon% %index%
+label-empty-foreground = #55
+
+; The following labels will be used to indicate the layout/mode
+; for the focused workspace. Requires <label-mode>
+;
+; Available tokens:
+;   None
+;label-monocle = 
+;label-tiled = 
+;label-fullscreen = 
+;label-floating = 
+;label-pseudotiled = P
+;label-locked = 
+;label-locked-foreground = #bd2c40
+;label-sticky = 
+;label-sticky-foreground = #fba922
+;label-private = 
+;label-private-foreground = #bd2c40
+;label-marked = M
+
+; Separator in between workspaces
+label-separator = 
+label-separator-padding = 2
+label-separator-foreground = #ffb52a
+
+[module/date]
+type = internal/date
+interval = 60
+date = %a %d %b
+time = %H:%M
+label =    %date%      %time%
+;label =  %time%
+format-padding = 1
+
+[module/alsa]
+type = internal/alsa
+format-volume =   <ramp-volume>  <label-volume>
+format-muted = 0%  
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+[module/poweroff]
+type = custom/script
+exec = echo "  "
+click-left = rofi -modi run,drun,window -show drun
+click-right = i3lock-fancy -pg &
+click-middle = /usr/bin/rofi-logout
+format-padding = 1
+
+[module/rofi]
+type = custom/script
+exec = echo "  "
+click-left = rofi -modi run,drun,window -show drun
+format-padding = 1
+
+
+[module/eth]
+type = internal/network
+interface = enp0s31f6
+interval = 3.0
+format-connected = <label-connected>
+format-connected-prefix = "  "
+format-connected-prefix-foreground = #b6a49b
+label-connected = %downspeed:9%
+format-disconnected = <label-disconnected>
+label-disconnected = not connected
+label-disconnected-foreground = #66ffffff
+format-padding = 1

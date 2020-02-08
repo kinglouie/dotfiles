@@ -1,0 +1,34 @@
+#! /bin/sh
+
+feh --bg-center ~/Images/background2.jpg
+xrdb -merge ~/.Xresources
+
+pkill polybar
+polybar bar &
+pkill picom
+#picom &
+$HOME/compton/build/src/picom --experimental-backends --backend glx &
+pkill sxhkd
+sxhkd &
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_radius	15	
+bspc config border_width        0 
+bspc config window_gap         30 
+bspc config top_padding 60 
+bspc config left_padding 50
+bspc config right_padding 50
+bspc config bottom_padding 30
+bspc config normal_border_color "#000000"
+bspc config focused_border_color "#ffffff"
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
