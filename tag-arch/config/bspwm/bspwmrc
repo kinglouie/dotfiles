@@ -1,19 +1,18 @@
 #! /bin/sh
 
-feh --bg-center ~/Images/background2.jpg
+~/.fehbg
 xrdb -merge ~/.Xresources
 
 pkill polybar
 polybar bar &
 pkill picom
-#picom &
-$HOME/compton/build/src/picom --experimental-backends --backend glx &
+picom --experimental-backends --backend glx &
 pkill sxhkd
 sxhkd &
 bspc monitor -d I II III IV V VI VII VIII IX X
 
-bspc config border_radius	15	
-bspc config border_width        0 
+bspc config border_radius	   15	
+bspc config border_width       0 
 bspc config window_gap         30 
 bspc config top_padding 60 
 bspc config left_padding 50
