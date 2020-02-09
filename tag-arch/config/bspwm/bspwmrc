@@ -1,5 +1,6 @@
 #! /bin/sh
 
+grep -q ^flags.*\ hypervisor /proc/cpuinfo && xrandr -s 1600x1200
 ~/.fehbg
 xrdb -merge ~/.Xresources
 
