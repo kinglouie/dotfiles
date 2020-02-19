@@ -6,8 +6,8 @@ xrdb -merge ~/.Xresources
 
 pkill polybar
 polybar bar &
-pgrep -q ^flags.*\ hypervisor /proc/cpuinfo || kill picom
-pgrep -q ^flags.*\ hypervisor /proc/cpuinfo || icom --experimental-backends --backend glx &
+grep -q ^flags.*\ hypervisor /proc/cpuinfo || kill picom
+grep -q ^flags.*\ hypervisor /proc/cpuinfo || picom --experimental-backends --backend glx &
 pkill sxhkd
 sxhkd &
 bspc monitor -d I II III IV V VI VII VIII IX X
