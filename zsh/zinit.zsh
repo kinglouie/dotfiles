@@ -15,16 +15,18 @@ autoload -Uz _zinit
 
 
 
-
-
 # pure prompt
 zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
+#autosuggestions
 zinit ice silent wait:1 atload:_zsh_autosuggest_start
 zinit light zsh-users/zsh-autosuggestions
 
-zinit ice blockf; zinit light zsh-users/zsh-completions
+#completions
+zinit ice wait lucid blockf atpull'zinit creinstall -q .'
+zinit light zsh-users/zsh-completions
 
+#syntax highlighting
 zinit ice silent wait!1 atload"ZINIT[COMPINIT_OPTS]=-C; zpcompinit"
 zinit light zdharma/fast-syntax-highlighting
