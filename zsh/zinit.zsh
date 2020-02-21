@@ -19,14 +19,26 @@ autoload -Uz _zinit
 zinit ice pick"async.zsh" src"pure.zsh"
 zinit light sindresorhus/pure
 
-#autosuggestions
-zinit ice silent wait:1 atload:_zsh_autosuggest_start
-zinit light zsh-users/zsh-autosuggestions
 
-#completions
-zinit ice wait lucid blockf atpull'zinit creinstall -q .'
-zinit light zsh-users/zsh-completions
+# Binary release in archive, from GitHub-releases page.
+# After automatic unpacking it provides program "fzf".
+#zinit ice from"gh-r" as"program"
+#zinit load junegunn/fzf-bin
 
-#syntax highlighting
-zinit ice silent wait!1 atload"ZINIT[COMPINIT_OPTS]=-C; zpcompinit"
-zinit light zdharma/fast-syntax-highlighting
+# Additional completion definitions
+zinit ice wait"0a" lucid blockf
+zinit load zsh-users/zsh-completions
+
+# History search by `Ctrl+R`
+zinit ice wait"0b" lucid; zinit load zdharma/history-search-multi-word
+
+# Syntax highlighting
+# (compinit without `-i` spawns warning on `sudo -s`)
+zinit ice wait"0a" lucid atinit"ZINIT[COMPINIT_OPTS]='-i' zpcompinit; zpcdreplay"
+    zinit load zdharma/fast-syntax-highlighting
+
+# Autosuggestions
+# Note: should go _after_ syntax highlighting plugin
+zinit ice wait"0a" lucid atload"_zsh_autosuggest_start"; zinit load zsh-users/zsh-autosuggestions
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
