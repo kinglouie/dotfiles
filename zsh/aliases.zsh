@@ -5,8 +5,8 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
 alias lc='colorls -lA --sd'
-alias ll="ls -lah" # exa overrides if available
-alias lsd="ls -la | grep '^d'"
+alias ll="ls -lah --color=auto" # exa overrides if available
+alias lsd="ls -la --color=auto | grep '^d'"
 alias clean="find . -regex '.*\(.AppleDouble\|.DS_Store\)$' -ls -exec rm -r {} \;"
 
 alias please='sudo $(fc -nl -1)' # Repeat last command with sudo
@@ -18,11 +18,6 @@ alias du="du -hc"
 alias ping="ping -c 5" # Ping only 5 times
 alias vi="vim"
 alias grep='grep --color=auto'
-
-command -v fasd >/dev/null && {
-  alias v="fasd -f -e vim"
-  alias vv="fasd -fi -e vim"
-}
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
