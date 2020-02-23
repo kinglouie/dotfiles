@@ -3,3 +3,5 @@
 	email = mail@matthias-hollerbach.de
 [core]
 	excludesfile = ~/.gitignore
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
