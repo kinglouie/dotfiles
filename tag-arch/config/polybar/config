@@ -123,36 +123,40 @@ label-dimmed-focused-background = #f00
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-focused = %icon%
+label-focused = %index%
 label-focused-foreground = #ffffff
 label-focused-background = #3f3f3f
 label-focused-underline = #fba922
+label-focused-padding = 2
 
 ; Available tokens:
 ;   %name%
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-occupied = %icon%
+label-occupied = %index%
 label-occupied-underline = #555555
+label-occupied-padding = 2
 
 ; Available tokens:
 ;   %name%
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-urgent = %icon%
+label-urgent = %index%
 label-urgent-foreground = #000000
 label-urgent-background = #bd2c40
 label-urgent-underline = #9b0a20
+label-urgent-padding = 2
 
 ; Available tokens:
 ;   %name%
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-empty = %icon% %index%
+label-empty = %index%
 label-empty-foreground = #55
+label-empty-padding = 2
 
 ; The following labels will be used to indicate the layout/mode
 ; for the focused workspace. Requires <label-mode>
@@ -174,7 +178,7 @@ label-empty-foreground = #55
 
 ; Separator in between workspaces
 label-separator = 
-label-separator-padding = 2
+label-separator-padding = 10
 label-separator-foreground = #ffb52a
 
 [module/date]
