@@ -1,0 +1,1 @@
+/home/mh/projects/personal/dotfiles/config/polybar/launch_polybar.sh
