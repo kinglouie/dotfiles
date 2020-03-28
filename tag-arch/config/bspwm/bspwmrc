@@ -12,9 +12,8 @@ pkill picom
 picom --experimental-backends --backend glx &
 pkill sxhkd
 sxhkd &
-$HOME/.config/bspwm/bspwm_reorder
-#bspc config remove_disabled_monitors true
-#bspc config remove_unplugged_monitors true
+
+$HOME/.config/bspwm/scripts/bspwm_reorder
 bspc config border_radius	       15	
 bspc config border_width         0 
 bspc config window_gap           30 
