@@ -1,0 +1,16 @@
+#! /bin/sh
+
+
+~/.fehbg
+xrdb -merge ~/.Xresources
+
+pkill picom
+picom --experimental-backends --backend glx &
+pkill sxhkd
+sxhkd &
+nm-applet &
+
+bspc config ignore_ewmh_focus true
+bspc rule -a Evolution -o desktop=^6 focus=off; evolution &
+bspc rule -a Franz -o desktop=^7 focus=off; franz &
+$HOME/.config/polybar/launch_polybar.sh

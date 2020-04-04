@@ -25,7 +25,7 @@ modules-right = date alsa eth poweroff
 module-margin = 2
 
 ;left - center - right - none
-tray-position = none
+tray-position = right
 tray-maxsize = 24
 tray-detached = false
 tray-transparent = false

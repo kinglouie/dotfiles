@@ -3,17 +3,9 @@ if grep -q ^flags.*\ hypervisor /proc/cpuinfo ; then
   $HOME/.config/bspwm/bspwmrc_vm 
   exit 1
 fi 
-~/.fehbg
-xrdb -merge ~/.Xresources
 
-pkill polybar
-  $HOME/.config/polybar/launch_polybar.sh
-pkill picom
-picom --experimental-backends --backend glx &
-pkill sxhkd
-sxhkd &
 
-$HOME/.config/bspwm/scripts/bspwm_reorder
+
 bspc config border_radius	       15	
 bspc config border_width         0 
 bspc config window_gap           30 
@@ -27,3 +19,8 @@ bspc config focused_border_color "#ffffff"
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+
+
+
+$HOME/.config/bspwm/scripts/bspwm_reorder
+$HOME/.config/bspwm/autostart
