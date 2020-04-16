@@ -1,0 +1,17 @@
+{
+  "autoLaunchInBackground": false,
+  "runInBackground": false,
+  "enableSystemTray": false,
+  "minimizeToSystemTray": false,
+  "showDisabledServices": false,
+  "showMessageBadgeWhenMuted": true,
+  "enableSpellchecking": true,
+  "spellcheckerLanguage": "de-de",
+  "darkMode": true,
+  "locale": "en-US",
+  "fallbackLocale": "en-US",
+  "beta": false,
+  "isAppMuted": false,
+  "enableGPUAcceleration": true,
+  "serviceLimit": 5
+}
