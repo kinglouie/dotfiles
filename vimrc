@@ -1,5 +1,7 @@
-set clipboard=unnamed
+set clipboard=unnamedplus
+
 set relativenumber
+set number
 
 set ignorecase
 set smartcase

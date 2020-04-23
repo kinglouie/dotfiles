@@ -5,11 +5,10 @@ if grep -q ^flags.*\ hypervisor /proc/cpuinfo ; then
 fi 
 
 
-
 bspc config border_radius	       15	
 bspc config border_width         0 
 bspc config window_gap           30 
-bspc config top_padding          60 
+bspc config top_padding          70 
 bspc config left_padding         50
 bspc config right_padding        50
 bspc config bottom_padding       30
@@ -19,7 +18,6 @@ bspc config focused_border_color "#ffffff"
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
-
 
 
 $HOME/.config/bspwm/scripts/bspwm_reorder

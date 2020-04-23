@@ -109,6 +109,9 @@ super + ctrl + shift + space
 #
 # move/resize
 #
+#
+super + e
+  $HOME/.config/bspwm/scripts/focus_mode
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
