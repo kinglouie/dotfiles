@@ -1,4 +1,5 @@
 [bar/bar]
+enable-ipc = true
 monitor = ${env:MONITOR:}
 background = #000000
 foreground = #b6a49b
