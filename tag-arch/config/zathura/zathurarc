@@ -22,8 +22,8 @@ set highlight-color             "#268bd2"
 set highlight-active-color      "#074D40"
 set recolor                     true
 set default-bg                  "rgba(33,39,51,.8)" 
-set default-fg                  "#001512"
-set recolor-lightcolor          "#001512"
+set default-fg                  "rgba(33,39,51,.8)" 
+set recolor-lightcolor          "rgba(0,0,0,0)"
 set recolor-darkcolor           "#E5E5E5"
 set statusbar-v-padding  15
 set statusbar-h-padding  75
