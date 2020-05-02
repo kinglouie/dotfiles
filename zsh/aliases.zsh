@@ -18,6 +18,7 @@ alias du="du -hc"
 alias ping="ping -c 5" # Ping only 5 times
 alias vi="vim"
 alias grep='grep --color=auto'
+alias vim="nvim"
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
