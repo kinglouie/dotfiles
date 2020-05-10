@@ -1,0 +1,42 @@
+
+# Read the default setting from the bspwm config file.
+_get_value() {
+	local bspwmrc
+	bspwmrc="$HOME/.config/bspwm/bspwmrc"
+
+	sed "/$1/!d ; s,.* $1\s*\([a-z0-9]*\).*,\1," "$bspwmrc"
+}
+
+## Use the function that gets the desired value from bspwmrc.
+window_gap="$(_get_value window_gap)"
+top_padding="$(_get_value top_padding)"
+right_padding="$(_get_value right_padding)"
+bottom_padding="$(_get_value bottom_padding)"
+left_padding="$(_get_value left_padding)"
+border_width="$(_get_value border_width)"
+border_radius="$(_get_value border_radius)"
+panel_height="$(polybar -d height bar)"
+
+if [ "$(bspc config -d focused window_gap)" -gt "0" ] ; then
+  # enter focus mode
+	top_padding=$(( -"top_padding" + "$panel_height" ))
+  right_padding=$(( -"right_padding"))
+  bottom_padding=$(( -"bottom_padding"))
+  left_padding=$(( -"left_padding"))
+  border_radius=0
+	window_gap=0
+	border_width=4
+else
+	top_padding=0
+  right_padding=0
+  bottom_padding=0
+  left_padding=0
+fi
+
+bspc config -d focused border_radius "$border_radius"
+bspc config -d focused window_gap "$window_gap"
+bspc config -d focused border_width "$border_width"
+bspc config -d focused top_padding "$top_padding"
+bspc config -d focused right_padding "$right_padding"
+bspc config -d focused bottom_padding "$bottom_padding"
+bspc config -d focused left_padding "$left_padding"
