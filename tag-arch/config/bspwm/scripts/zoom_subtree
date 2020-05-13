@@ -1,0 +1,2 @@
+	value=$(bspc query -N -n @brother.hidden > /dev/null && echo off || echo on)
+	bspc node @brother -g hidden=${value}
