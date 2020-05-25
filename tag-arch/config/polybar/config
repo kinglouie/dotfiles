@@ -22,7 +22,7 @@ font-5 = FontAwesome:size=20;1
 
 modules-left = title 
 modules-center = bspwm
-modules-right = date alsa eth poweroff 
+modules-right = battery date alsa eth poweroff 
 module-margin = 2
 
 ;left - center - right - none
@@ -232,3 +232,25 @@ format-disconnected = <label-disconnected>
 label-disconnected = not connected
 label-disconnected-foreground = #66ffffff
 format-padding = 1
+
+[module/battery]
+type = internal/battery
+
+; This is useful in case the battery never reports 100% charge
+full-at = 99
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = AC0
+
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 5
