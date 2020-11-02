@@ -19,6 +19,14 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
+profile="$(autorandr | grep current | awk '{ print $1 }')"
+reorderfile="$HOME/.config/autorandr/$profile/bspwm_reorder"
+echo "$reorderfile"
+if test -f "$reorderfile"; then
+  echo 'testeeee'
+  $reorderfile
+else
+  $HOME/.config/autorandr/scripts/bspwm_reorder
+fi
 
-$HOME/.config/bspwm/scripts/bspwm_reorder
 $HOME/.config/bspwm/autostart
