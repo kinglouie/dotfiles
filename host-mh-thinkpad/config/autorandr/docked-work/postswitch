@@ -1,6 +1,5 @@
 #!/bin/bash
 
 $HOME/.fehbg
-
 $HOME/.config/polybar/launch_polybar.sh
-./bspwm_reorder
+$HOME/.config/bspwm/scripts/bspwm_reorder_docked-work
