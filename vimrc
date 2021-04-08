@@ -33,14 +33,13 @@ endif
 call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'vim-airline/vim-airline'
-  Plug 'ayu-theme/ayu-vim'
+  Plug 'arcticicestudio/nord-vim'
   Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 
 set termguicolors
-let ayucolor="mirage"
-colorscheme ayu
+colorscheme nord
 
 let g:airline_powerline_fonts = 1
 

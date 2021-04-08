@@ -7,3 +7,4 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 export MANPAGER='less -X';
 
 export KEYTIMEOUT=1
+export OPENCV_LOG_LEVEL=ERROR

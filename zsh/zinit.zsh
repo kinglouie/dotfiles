@@ -14,9 +14,6 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 
-
-
-
 #################################################################
 # FUNCTIONS TO MAKE CONFIGURATION LESS VERBOSE
 #
@@ -40,6 +37,8 @@ zsnippet() { zinit snippet                        "${@}"; }
 
 
 
+# case-insensitive matching only if there are no case-sensitive matches
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 
 
@@ -58,7 +57,7 @@ zinit light sindresorhus/pure
 # and key bindings.
 #
 
-# Install `fzf` bynary and tmux helper script
+# Install `fzf` binary and tmux helper script
 zcommand from"gh-r";         zload junegunn/fzf-bin
 zcommand pick"bin/fzf-tmux"; zload junegunn/fzf
 # Create and bind multiple widgets using fzf

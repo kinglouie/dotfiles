@@ -1,0 +1,95 @@
+* {
+    foreground:  #ffffff;
+    foreground-alt: #666666;
+
+    backlight:   #ffeeee;
+    background-color:  #00000010;
+    backgroud-alt: #222222;
+    highlight: underline bold #ffffff;
+
+    font: "FuraCode 15";
+    dark: #000000;
+}
+#window {
+    padding: 10px;
+    border:  0px;
+    border-radius: 2px;
+    color: @foreground;
+    background-color: transparent;
+    spacing: 0;
+    children:  [mainbox];
+    orientation: horizontal;
+    fullscreen: true;
+    padding: 30%;
+}
+
+#mainbox {
+    spacing: 0;
+    background-color: #00000055;
+    children: [ inputbar, message, listview ];
+}
+
+#message 
+{
+	border: none;
+    padding: 5;
+}
+
+#inputbar {
+    padding: 20px 0 11px 0;
+	color: @foreground;
+}
+#entry,prompt,case-indicator {
+    text-font: inherit;
+    text-color:inherit;
+}
+
+#prompt {
+    margin:     0px 0.3em 0em 0em ;
+    backgroud: transparent;
+}
+#listview {
+    padding: 20px;
+    border-color: @foreground;
+    border: none;
+    dynamic: false;
+    //lines: 13;
+}
+#element {
+    padding: 5px;
+    vertical-align: 0.5;
+    color: @foreground;
+    font-size: 10px;
+}
+#element selected.normal {
+    background-color: @foreground-alt;
+	  color: #fafafa;
+}
+#element normal active {
+    foreground: @foreground-alt;
+	color: #fff;
+}
+#element normal urgent {
+    foreground: #ff332299;
+}
+
+#element alternate active {
+    foreground: @foreground-alt;
+	color: @foreground;
+}
+#element alternate urgent {
+    foreground: #ff332299;
+}
+#element selected active {
+    background-color: @foreground-alt;
+    foreground: @foreground;
+}
+#element selected urgent {
+    background-color: #ff332299;
+    foreground: @dark;
+}
+#vertb {
+    expand: false;
+    children: [ dummy0, sidebar, dummy1  ];
+}
+

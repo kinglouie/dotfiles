@@ -16,6 +16,8 @@ fixed-center = true
 font-0 = SF Pro Display Regular:size=13;1
 font-1 = FiraCode Nerd Font:size=12;1
 font-2 = FontAwesome:size=20;1
+font-3 = EmojiOne:pixelsize=16:style=Color:scale=1.1;1
+font-4 = Twitter Color Emoji:pixelsize=16:style=Regular:scale=5;1
 
 
 
@@ -46,6 +48,7 @@ compositing-underline = over
 compositing-border = over
 
 wm-name = bar
+wm-restack = bspwm
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -224,7 +227,7 @@ type = internal/network
 interface = wlan0
 interval = 3.0
 format-connected = <label-connected>
-format-connected-prefix = " "
+format-connected-prefix = "%{T4}😊%{T-} "
 format-connected-prefix-foreground = #b6a49b
 label-connected = %{A1:"$HOME/.config/polybar/wifi_menu.sh":}%downspeed:9%%{A}
 format-disconnected = <label-disconnected>
@@ -234,7 +237,7 @@ format-padding = 1
 
 [module/battery]
 type = internal/battery
-full-at = 99
+full-at = 89
 ; Use the following command to list batteries and adapters:
 ; $ ls -1 /sys/class/power_supply/
 battery = BAT0
@@ -242,7 +245,7 @@ adapter = AC
 
 format-charging = <animation-charging>   <label-charging>
 format-discharging = <ramp-capacity>   <label-discharging>
-label-full = %percentage%
+label-full =   %percentage%%
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
