@@ -12,10 +12,6 @@ zinit light rupa/z
 zinit ice wait lucid
 zinit light changyuheng/fz
 
-# z / fzf (ctrl-g)
-zinit ice wait lucid
-zinit light andrewferrier/fzf-z
-
 # cd
 zinit ice wait lucid
 zinit light changyuheng/zsh-interactive-cd
@@ -30,7 +26,7 @@ zinit wait lucid for \
     zsh-users/zsh-autosuggestions
 
 
-
+source <(fzf --zsh)
 
 #ALIASES
 
@@ -70,7 +66,6 @@ setopt hist_save_nodups
 setopt hist_ignore_space
 setopt hist_reduce_blanks
 setopt hist_verify
-
 # Lando
 export PATH="/Users/mh/.lando/bin${PATH+:$PATH}"; #landopath
 export COPYFILE_DISABLE=1;
