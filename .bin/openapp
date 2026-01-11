@@ -1,0 +1,97 @@
+#!/bin/sh
+
+if [ $1 = "finder" ]; then
+	osascript <<-EOD
+		tell application "Finder"
+			set myW to make new Finder window
+			set target of myW to home
+			activate
+		end tell
+	EOD
+
+elif [ $1 = "safari" ]; then
+	{
+	osascript <<-EOD
+		tell application "Safari"
+			make new document
+			activate
+		end tell
+	EOD
+	} || open -a /Applications/Safari.app
+
+elif [ $1 = "firefox-nightly" ]; then
+	{
+	osascript <<-EOD
+		tell application "System Events"
+				tell process "Firefox Nightly"
+						click menu item "New Window" of menu "File" of menu bar 1
+						activate
+				end tell
+		end tell
+		tell application "Firefox Nightly"
+		end tell
+	EOD
+	} || open -a /Applications/Firefox\ Nightly.app
+
+elif [ $1 = "iterm2-test" ]; then
+	{
+	osascript <<-EOD
+		if application "Finder" is frontmost then
+				tell application "Finder" to set dir_path to quoted form of (POSIX path of (first item of (get selection as alias list) as alias))
+		else
+				set dir_path to ""
+		end if
+		tell application "iTerm2"
+				set win to (create window with default profile)
+				if dir_path is not equal to ""
+						set sesh to (current session of win)
+						tell sesh to write text "cd " & dir_path & ";clear"
+				end if
+		end tell
+	EOD
+	} || open -a /Applications/iTerm.app
+
+elif [ $1 = "iterm2" ]; then
+	{
+	osascript <<-EOD
+		tell application "iTerm2" 
+			create window with default profile
+			activate
+		end tell
+	EOD
+	} || open -a /Applications/iTerm.app
+
+elif [ $1 = "kitty-test" ]; then
+	osascript <<-EOD
+		set rng to (application "kitty" is running)
+		activate application "kitty"
+		if rng then
+				tell application "System Events"
+						keystroke "n" using command down
+				end tell
+		end if'
+	EOD
+
+
+elif [ $1 = "hyper" ]; then
+	{
+	osascript <<-EOD
+		tell application "System Events"
+				tell process "Hyper"
+						click menu item "New Window" of menu "Shell" of menu bar 1
+						activate
+				end tell
+		end tell
+	EOD
+	} || open -a /Applications/Hyper.app
+
+elif [ $1 = "sublime-text" ]; then
+	{
+    /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n "new File"
+  }
+
+elif [ $1 = "vscode" ]; then
+	{
+    /opt/homebrew/bin/code -n
+  }
+fi
