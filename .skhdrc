@@ -1,0 +1,121 @@
+# MODES
+
+    :: default : yabai -m config window_opacity off
+    :: tiling : yabai -m config window_opacity on
+
+   alt - f ; tiling
+   tiling < escape ; default
+
+
+# MODE == DEFAULT
+
+    # enter key
+    cmd - 0x24 : $HOME/.bin/openapp iterm2
+
+    # open new finder
+    cmd + alt - f: $HOME/.bin/openapp finder
+
+    # open new browser window key
+    cmd + alt - b : $HOME/.bin/openapp safari
+
+    # open new vscode window key
+    cmd + alt - v: $HOME/.bin/openapp vscode
+
+    cmd - 1 : yabai -m space --focus  1 || skhd -k "ctrl + alt + cmd - 1"
+    cmd - 2 : yabai -m space --focus  2 || skhd -k "ctrl + alt + cmd - 2"
+    cmd - 3 : yabai -m space --focus  3 || skhd -k "ctrl + alt + cmd - 3"
+    cmd - 4 : yabai -m space --focus  4 || skhd -k "ctrl + alt + cmd - 4"
+    cmd - 5 : yabai -m space --focus  5 || skhd -k "ctrl + alt + cmd - 5"
+    cmd - 6 : yabai -m space --focus  6 || skhd -k "ctrl + alt + cmd - 6"
+    cmd - 7 : yabai -m space --focus  7 || skhd -k "ctrl + alt + cmd - 7"
+    cmd - 8 : yabai -m space --focus  8 || skhd -k "ctrl + alt + cmd - 8"
+    cmd - 9 : yabai -m space --focus  9 || skhd -k "ctrl + alt + cmd - 9"
+    cmd - 0 : yabai -m space --focus 10 || skhd -k "ctrl + alt + cmd - 0"
+
+
+    alt + cmd - 1 : yabai -m window --space  1 && yabai -m space --focus 1
+    alt + cmd - 2 : yabai -m window --space  2 && yabai -m space --focus 2
+    alt + cmd - 3 : yabai -m window --space  3 && yabai -m space --focus 3
+    alt + cmd - 4 : yabai -m window --space  4 && yabai -m space --focus 4
+    alt + cmd - 5 : yabai -m window --space  5 && yabai -m space --focus 5
+    alt + cmd - 6 : yabai -m window --space  6 && yabai -m space --focus 6
+    alt + cmd - 7 : yabai -m window --space  7 && yabai -m space --focus 7
+    alt + cmd - 8 : yabai -m window --space  8 && yabai -m space --focus 8
+    alt + cmd - 9 : yabai -m window --space  9 && yabai -m space --focus 9
+    alt + cmd - 0 : yabai -m window --space 10 && yabai -m space --focus 10
+
+# MODE == TILING
+
+    # focus window
+    tiling < h : yabai -m window --focus west
+    tiling < j : yabai -m window --focus south
+    tiling < k : yabai -m window --focus north
+    tiling < l : yabai -m window --focus east
+
+    # swap window
+    tiling < alt - h : yabai -m window --swap west
+    tiling < alt - j : yabai -m window --swap south
+    tiling < alt - k : yabai -m window --swap north
+    tiling < alt - l : yabai -m window --swap east
+
+    # move window
+    tiling < cmd - h : yabai -m window --warp west
+    tiling < cmd - j : yabai -m window --warp south
+    tiling < cmd - k : yabai -m window --warp north
+    tiling < cmd - l : yabai -m window --warp east
+
+
+
+    # balance size of windows
+    tiling < alt - 0 : yabai -m space --balance
+
+    # make floating window fill screen
+    tiling < alt - up     : yabai -m window --grid 1:1:0:0:1:1
+
+    # make floating window fill left-half of screen
+    tiling < alt - left   : yabai -m window --grid 1:2:0:0:1:1
+
+    # make floating window fill right-half of screen
+    tiling < alt - right  : yabai -m window --grid 1:2:1:0:1:1
+
+
+
+    # rotate tree
+    tiling < alt - r : yabai -m space --rotate 90
+
+    # mirror tree y-axis
+    tiling < alt - y : yabai -m space --mirror y-axis
+
+    # mirror tree x-axis
+    tiling < alt - x : yabai -m space --mirror x-axis
+
+    # toggle desktop offset
+    tiling < alt - a : yabai -m space --toggle padding; yabai -m space --toggle gap ; skhd -k "escape"
+
+    # toggle window parent zoom
+    tiling < alt - d : yabai -m window --toggle zoom-parent ; skhd -k "escape"
+
+    # toggle window fullscreen zoom
+    tiling < alt - f : yabai -m window --toggle zoom-fullscreen ; skhd -k "escape"
+
+    # toggle window native fullscreen
+    tiling < shift + alt - f : yabai -m window --toggle native-fullscreen
+
+    # toggle window split type
+    tiling < alt - e : yabai -m window --toggle split ; skhd -k "escape"
+
+    # float / unfloat window and center on screen
+    tiling < alt - t : yabai -m window --toggle float;\
+              yabai -m window --grid 4:4:1:1:2:2
+
+    # change layout of desktop
+    tiling < ctrl + alt - a : yabai -m space --layout bsp
+    tiling < ctrl + alt - d : yabai -m space --layout float
+
+    
+    tiling < alt - p : yabai -m window --toggle sticky;\
+          yabai -m window --toggle topmost;\
+          yabai -m window --toggle border;\
+          yabai -m window --toggle pip
+
+

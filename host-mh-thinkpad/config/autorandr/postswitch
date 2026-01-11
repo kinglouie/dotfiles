@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if [ "$DESKTOP_SESSION" == "bspwm" ]
-then
-    $HOME/.fehbg
-    $HOME/.config/polybar/launch_polybar.sh
-    $HOME/.config/bspwm/scripts/bspwm_reorder
-fi

@@ -1,6 +1,0 @@
-Xft.dpi: 144 
-
-!rofi.color-window: #141218, #141218, #385189
-!rofi.color-normal: #141218, #DEA4DA, #141218, #385189, #141218
-!rofi.color-active: #141218, #DEA4DA, #141218, #385189, #141218
-!rofi.color-urgent: #141218, #945C74, #141218, #945C74, #DEA4DA

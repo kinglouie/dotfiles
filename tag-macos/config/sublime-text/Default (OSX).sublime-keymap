@@ -1,3 +1,0 @@
-[
-	{ "keys": ["command+shift+r"], "command": "build", "args": {"variant": "Run"} }
-]
